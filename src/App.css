@@ -1,0 +1,94 @@
+
+
+*{
+    font-family: monospace;
+    box-sizing: border-box;
+
+}
+
+/* Define custom color in :root */
+:root {
+    --background: #112240; /* Replace with your preferred lightest navy color */
+  }
+
+  /* Apply styles for the scrollbar */
+::-webkit-scrollbar {
+    width: 12px;  /* Adjust the width of the scrollbar */
+}
+
+/* Style the scrollbar track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background-color: var(--background); /* Use the same background color as the root */
+}
+
+/* Style the scrollbar thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background-color: #4a6a80; /* You can customize this color */
+    border-radius: 10px;
+    border: 3px solid #233554; /* Optional: Add a border that matches the root background */
+}
+
+/* Optionally, style the scrollbar on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #607d8b; /* A lighter color on hover */
+}
+
+  
+  /* Apply the background to body */
+body {
+    background-color: var(--background) !important;
+
+    
+  }
+
+  html, body { overflow-x:hidden!important; }
+
+
+
+  .light-navy {
+    background-color: #112240;
+    padding: 20px;
+    box-shadow: none;
+  }
+
+  /* Remove hover background on navbar-item */
+.navbar-item:hover {
+    background-color: transparent !important;
+  }
+  
+  
+  /* Custom style for transparent navbar background */
+.navbar.is-transparent {
+    background-color: transparent !important;
+    box-shadow: none; /* Remove shadow if any */
+  }
+  
+
+.button.is-primary.is-outlined {
+    transition: all 0.3s ease; /* Smooth transition */
+
+  }
+  
+  .button.is-primary.is-outlined:hover {
+    transform: scale(1.1) translate(-8px, -2px); /* Scale and move slightly to the top-left */
+    transform-origin: top left; /* Scale and translate from upper-left corner */
+  }
+
+  .navbar-item{
+    color: white!important;
+    margin-right: 0; /* No margin on small screens */
+  }
+
+  @media screen and (min-width: 1024px) {
+    .navbar-item {
+        margin-right: 1.25rem; /* equivalent to mr-5 */
+    }
+}
+
+  .navbar-item:hover {
+    color: 	hsl(171, 100%, 41%) !important; /* Bulma's primary color */
+  }
+  
+
+  
+  
