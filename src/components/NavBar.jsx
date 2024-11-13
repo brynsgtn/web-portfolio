@@ -45,7 +45,7 @@ export default function NavBar() {
                 </a>
 
                 <a className="navbar-item" href="#">
-                    Work
+                    Projects
                 </a>
 
                 <a className="navbar-item" href="#">

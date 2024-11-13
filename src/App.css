@@ -96,16 +96,17 @@ body {
   
   
   .my-name {
-    margin: 0px 0px 20px 4px;
+    margin: 0px 0px 30px 4px;
     font-size: clamp(14px, 5vw, 16px);
     font-weight: 400;
     line-height: 1.1;
   }
 
   .hero {
-    padding: 100px 0 0 0;
+    padding: 200px 0 0 0;
     min-height: 100vh;
     height: 100vh;
+    justify-content: initial; /* or unset */
 
   }
 
@@ -118,10 +119,10 @@ body {
   }
 
   .description {
-    margin-top: 15px;
-    color: var(--slate);
+    margin-top: 5px;
+    color: #8892b0;
     line-height: 0.9;
-    font-size: clamp(35px, 8vw, 70px);
+    font-size: clamp(30px, 8vw, 65px);
     font-weight: 600;
     font-family: sans-serif;
     
@@ -134,14 +135,12 @@ body {
     font-family: sans-serif;
   }
 
+  .learn {
+    width: 180px;
+  }
+
   .main {
-    display: flex;;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items:start;
-    
+
     padding: 0px 25px;
   }
 
@@ -206,10 +205,39 @@ aside {
 }
 
 /* Hide asides on tablets and smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 786px) {
   aside {
     display: none;
   }
+
+  section{
+   margin: 0px 10px;
+  }
+
+  .hero {
+    padding-top: 100px;
+  }
+
+  .about-inner{
+    display: block!important;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  section{
+    max-width: 800px;
+  }
+  
+
+}
+
+@media (max-width: 320px) {
+
+  .pic{
+    max-width: 250px!important;
+  }
+  
 
 }
 li {
@@ -218,6 +246,117 @@ li {
 
 
 
+.about-me{
+    padding: 100px 0;
 
+}
+
+.about-header{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0px 40px;
 
   
+}
+.about{
+  font-weight: 600;
+  color: #ccd6f6;
+  line-height: 1.1;
+  margin: 0;
+  font-size: clamp(26px, 5vw, 32px);
+  font-family: sans-serif;
+  white-space: nowrap;
+  
+}
+
+.about-line {
+  width: 400px;
+  height: 2px; /* Set the height of the line */
+  background-color: #8892b0; /* Set line color */
+  margin-left: 10px;
+}
+
+.about-paragraph{
+  color: #8892b0;
+  margin: 0 0 15px;
+  font-family: sans-serif;
+  font-size: clamp(16px, 5vw, 17px);
+}
+
+.about-inner{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 50px;
+}
+
+.pic-wrapper{
+  text-align: center;
+}
+
+.pic {
+  position: relative;
+  max-width: 300px;
+  object-fit: cover;
+  opacity: 0.7;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 6px 30px rgba(0, 209, 178, 0.3); /* Bulma primary color for shadow */
+  transition: opacity 0.25s linear, transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+  margin: 40px auto 0;
+}
+
+.pic:hover {
+  opacity: 1; /* Restores the original image opacity on hover */
+  transform: translate(-10px, -10px) scale(1.05) translateZ(0); /* Moves the image up-left */
+  border-right: 4px solid #00d1b2; /* Bulma primary color for the right border */
+  border-bottom: 4px solid #00d1b2; /* Bulma primary color for the bottom border */
+  box-shadow: 0 20px 60px rgba(0, 209, 178, 0.5); /* Thicker shadow with Bulma primary color */
+  will-change: opacity, transform, box-shadow, border;
+}
+
+
+.text-link{
+  font-family: sans-serif;
+  font-size: clamp(16px, 5vw, 17px);
+}
+.text-link:hover {
+  color: #00d1b2; /* Optional hover color for text */
+  text-decoration: underline;
+}
+
+
+.skills{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 200px));
+  gap: 0px 3px;
+  padding: 0px;
+  margin: 10px 0px 0px;
+  overflow: hidden;
+  list-style:none;
+  font-size: 12px;
+}
+
+.skills li{
+  margin: 10px;
+  padding-left: 10px;
+}
+
+.skills li:before{
+  content: "▹";
+  padding-right: 10px;
+  left: 0px;
+  color: #00d1b2;
+  font-size: 14px;
+  line-height: 12px;
+}
+
+#particles-container, canvas {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
