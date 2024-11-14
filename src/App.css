@@ -221,6 +221,10 @@ aside {
   .about-inner{
     display: block!important;
   }
+  .pic{
+    border-radius: 140px!important;
+  }
+  
 }
 
 @media (max-width: 1024px) {
@@ -246,12 +250,12 @@ li {
 
 
 
-.about-me{
+.about-me, .projects{
     padding: 100px 0;
 
 }
 
-.about-header{
+.about-header, .projects-header{
   display: flex;
   align-items: center;
   gap: 10px;
@@ -259,7 +263,7 @@ li {
 
   
 }
-.about{
+.about, .some{
   font-weight: 600;
   color: #ccd6f6;
   line-height: 1.1;
@@ -270,8 +274,19 @@ li {
   
 }
 
+.some {
+  font-size: clamp(20px, 5vw, 32px);
+}
+
 .about-line {
   width: 400px;
+  height: 2px; /* Set the height of the line */
+  background-color: #8892b0; /* Set line color */
+  margin-left: 10px;
+}
+
+.projects-line {
+  width: 200px;
   height: 2px; /* Set the height of the line */
   background-color: #8892b0; /* Set line color */
   margin-left: 10px;
@@ -299,21 +314,16 @@ li {
   max-width: 300px;
   object-fit: cover;
   opacity: 0.7;
-  border-top: 2px solid transparent;
-  border-left: 2px solid transparent;
-  border-right: 2px solid transparent;
-  border-bottom: 2px solid transparent;
   border-radius: 8px;
-  box-shadow: 0 6px 30px rgba(0, 209, 178, 0.3); /* Bulma primary color for shadow */
   transition: opacity 0.25s linear, transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
   margin: 40px auto 0;
 }
 
 .pic:hover {
   opacity: 1; /* Restores the original image opacity on hover */
-  transform: translate(-10px, -10px) scale(1.05) translateZ(0); /* Moves the image up-left */
-  border-right: 4px solid #00d1b2; /* Bulma primary color for the right border */
-  border-bottom: 4px solid #00d1b2; /* Bulma primary color for the bottom border */
+  transform: translate(-20px, -20px) scale(1.05) translateZ(0); /* Moves the image up-left */
+  border-right: 8px solid #00d1b2; /* Bulma primary color for the right border */
+  border-bottom: 8px solid #00d1b2; /* Bulma primary color for the bottom border */
   box-shadow: 0 20px 60px rgba(0, 209, 178, 0.5); /* Thicker shadow with Bulma primary color */
   will-change: opacity, transform, box-shadow, border;
 }
@@ -360,3 +370,73 @@ li {
   width: 100%;
   position: absolute;
 }
+
+
+.projects{
+  min-height: 100vh;
+
+}
+
+/* .featured-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+
+} */
+
+.card-bg{
+  background-color: #112240;
+
+}
+
+.card{
+  box-shadow: none;
+  --bulma-card-background-color: unset; /* Or specify a custom color, e.g., #fff */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 50px 0;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02); /* Slightly lift and scale the card */
+}
+
+.tag{
+  border: #00d1b2;
+  border-style: solid;
+  border-width: 1px;
+  padding: 8px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #00d1b2; /* Background color on hover */
+  border-color: #ffffff; /* Change border color on hover */
+  color: #ffffff; /* Change text color on hover */
+}
+
+.github-button, .live-button{
+  border: none;
+  background-color: #112240;
+  transition: background-color 0.3s ease;
+}
+
+.github-button:hover, .live-button:hover {
+  background-color: #00d1b2; /* Changes color to a lighter shade on hover */
+}
+.card-content {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card-content {
+  opacity: 0.9; /* Lower opacity to create a subtle overlay effect */
+}
+
+
+.featured-projects-header{
+  margin: 10px 0 30px;
+  font-size: clamp(16px, 5vw, 24px);
+}
+
+
+
