@@ -10,7 +10,7 @@ export default function NavBar() {
     };
     return (
         <>
-        <nav className="navbar is-transparent py-5 mx-6 is-fixed-top" role="navigation" aria-label="main navigation">
+        <nav className="navbar is-transparent py-5 mx-6" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a className="navbar-item" href="#">
                 <p className="is-family-code has-text-weight-bold is-size-4 has-text-primary">&lt;brynsgtn.dev/&gt;</p>

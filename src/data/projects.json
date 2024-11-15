@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Dish Discover",
+        "image": "./dishdiscover.png",
+        "description": "Dish Discover Recipe Finder is a web application built with React, designed to help users explore and discover recipes based on their available ingredients and preferences.",
+        "tags": ["ReactJs", "Mantine", "TheMealDB", "SWR", "React Toastify", "Netlify"],
+        "githubLink": "https://github.com/brynsgtn/recipe-finder",
+        "liveDemoLink": "https://dish-discover-brynsgtn.netlify.app/"
+    },
+    {
+        "title": "ShopSmart",
+        "image": "./shopsmart.png",
+        "description": "ShopSmart is a web-based e-commerce application front-end prototype built with React. The application allows users to browse products, view product details, manage a shopping cart, and complete purchases.",
+        "tags": ["ReactJs", "Bootstrap", "FakeStoreAPI", "SweetAlert2", "Netlify"],
+        "githubLink": "https://github.com/brynsgtn/fake-store",
+        "liveDemoLink": "https://shopsmart-brynsgtn.netlify.app/"
+    },
+    {
+        "title": "To-Do List",
+        "image": "./todo.png",
+        "description": "This is a simple web-based to-do list application built using JavaScript and then converted into TypeScript, HTML, CSS, Bootstrap, and Firebase. It allows users to create, edit, and delete tasks, with real-time synchronization using Firebase Realtime Database.",
+        "tags": ["HTML", "CSS", "TypeScript", "Bootstrap","Firebase", "Netlify"],
+        "githubLink": "https://github.com/brynsgtn/toDoList",
+        "liveDemoLink": "https://to-do-list-brynsgtn.netlify.app/"
+    }
+]

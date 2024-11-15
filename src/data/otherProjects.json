@@ -1,0 +1,73 @@
+[
+    {
+      "title": "TrackFit Health Monitor",
+      "description": "A web application built with React, designed to help students and instructors monitor health metrics such as average heart rate, total steps, and total calories burned.",
+      "tags": ["ReactJs", "Tailwind CSS", "Netlify"],
+      "githubLink":"https://github.com/brynsgtn/fitness-first",
+      "liveDemoLink":"https://track-fit-mapua.netlify.app/"
+    },
+    {
+      "title": "NBA Memory Game",
+      "description": "A web-based application built with React. The game challenges players to click on each NBA player card once without repeating any clicks. It tracks the current score and high score, shuffling the cards after each click to increase the difficulty.",
+      "tags": ["ReactJs", "Bootstrap", "Vercel"],
+      "githubLink":"https://github.com/brynsgtn/memory-game",
+      "liveDemoLink":"https://memory-game-beryl-nu.vercel.app/"
+    },
+    {
+      "title": "CV Builder",
+      "description": "A web-based application that allows users to create and customize their CVs (curriculum vitae) or resumes. It provides a user-friendly interface for entering personal details, educational background, work experience, skills, and other relevant information.",
+      "tags": ["ReactJs", "CSS", "Netlify"],
+      "githubLink":"https://github.com/brynsgtn/cv-builder",
+      "liveDemoLink":"https://cv-builder-prototype.netlify.app/"
+    },
+    {
+      "title": "Dynamic Digital Clock",
+      "description": "A web-based application that displays the current time, date, and time zone information. It allows users to select their desired time zone from a dropdown menu and switches between light and dark modes for improved readability.",
+      "tags": ["HTML", "CSS", "TypeScript", "DayJS","MicroModal", "Vite Build Tool", "Netlify"],
+      "githubLink":"https://github.com/brynsgtn/Dynamic-Digital-Clock",
+      "liveDemoLink":"https://digital-clock-brynsgtn.netlify.app/"
+    },
+    {
+      "title": "Cash Register",
+      "description": "A basic web application designed to simulate a cash register. It allows users to input the amount of cash tendered by a customer and calculates the change due based on the price of an item.",
+      "tags": ["HTML", "CSS", "TypeScript", "Netlify"],
+      "githubLink":"https://github.com/brynsgtn/cashRegister",
+      "liveDemoLink":"https://cash-register-brynsgtn.netlify.app/"
+    },
+    {
+      "title": "US Phone Number Validator",
+      "description": "The US Phone Number Validator App allows users to input a phone number and validates whether it is in the correct format for a US phone number.",
+      "tags": ["HTML", "CSS", "TypeScript", "Netlify"],
+      "githubLink":"https://github.com/brynsgtn/telephoneNumberValidator",
+      "liveDemoLink":"https://us-number-validator.netlify.app/"
+    },
+    {
+      "title": "Palindrome Checker",
+      "description": "This is a simple web application that allows users to check if a given string is a palindrome or not.",
+      "tags": ["HTML", "CSS", "TypeScript", "Netlify"],
+      "githubLink":"https://github.com/brynsgtn/palindromeChecker",
+      "liveDemoLink":"https://palindromechecker-brynsgtn.netlify.app/"
+    },
+    {
+      "title": "Roman Numeral Converter",
+      "description": "This Roman Numeral Converter is a project developed to achieve the goal of mastering the conversion from Arabic to Roman numerals.",
+      "tags": ["HTML", "CSS", "TypeScript", "Netlify"],
+      "githubLink":"https://github.com/brynsgtn/romanNumeralConverter",
+      "liveDemoLink":"https://romannumeralconverterapp.netlify.app/"
+    },
+    {
+      "title": "Weather App",
+      "description": "This is a simple weather application built using the OpenWeatherMap API to fetch current weather data. It allows users to check the current weather conditions for any city around the world.",
+      "tags": ["HTML", "CSS", "TypeScript","OpenWeatherMapAPI", "Netlify"],
+      "githubLink":"https://github.com/brynsgtn/weatherApp",
+      "liveDemoLink":"https://weather-application-brynsgtn.netlify.app/"
+    },
+    {
+      "title": "Pokémon Search App",
+      "description": "This project is a Pokémon search app built using HTML, CSS, and Javascript then converted to Typescript. It utilizes the PokéAPI through a proxy server to fetch Pokémon data and display it to the user.",
+      "tags": ["HTML", "CSS", "TypeScript","PokeAPI", "Netlify"],
+      "githubLink":"https://github.com/brynsgtn/pokemonSearchApp",
+      "liveDemoLink":"https://pokesearchapp.netlify.app/"
+    }
+   
+  ]

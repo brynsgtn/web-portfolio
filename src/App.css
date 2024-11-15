@@ -224,6 +224,9 @@ aside {
   .pic{
     border-radius: 140px!important;
   }
+  .column{
+    flex-basis: unset;
+  }
   
 }
 
@@ -243,6 +246,25 @@ aside {
   }
   
 
+}
+
+@media (max-width: 425px) {
+
+.media{
+  text-align: center;
+}
+
+.tags{
+  justify-content: center;
+}
+
+.media-column{
+  text-align: center;
+}
+
+.github-button {
+  margin-right: 0!important;
+}
 }
 li {
   margin-top:30px;
@@ -405,27 +427,26 @@ li {
   border-style: solid;
   border-width: 1px;
   padding: 8px;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.tag:hover {
-  background-color: #00d1b2; /* Background color on hover */
-  border-color: #ffffff; /* Change border color on hover */
-  color: #ffffff; /* Change text color on hover */
-}
+
 
 .github-button, .live-button{
   border: none;
   background-color: #112240;
   transition: background-color 0.3s ease;
+  width: 200px;
+  margin-top: 5px;
 }
+
+.githublogo-button, .livelogo-button {
+  border: none;
+  background-color: #112240;
+}
+
 
 .github-button:hover, .live-button:hover {
   background-color: #00d1b2; /* Changes color to a lighter shade on hover */
-}
-.card-content {
-  opacity: 1;
-  transition: opacity 0.3s ease;
 }
 
 .card:hover .card-content {
@@ -437,6 +458,99 @@ li {
   margin: 10px 0 30px;
   font-size: clamp(16px, 5vw, 24px);
 }
+.featured-img{
+  object-fit: cover!important;
+}
 
 
+.media-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  padding:40px;
+}
 
+
+.featured-projects-column{
+  margin-top: 60px
+}
+
+.additional-projects-header {
+  margin-top: 150px;
+}
+
+/* OtherProjects.css */
+.columns.is-multiline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.column.is-one-third {
+  display: flex;
+}
+
+.equal-height-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-radius: 0; /* Remove border radius */
+}
+
+.equal-height-card .card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.equal-height-card .content {
+  flex-grow: 1;
+}
+
+.see-more-button {
+  margin: 20px auto 0px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block; /* Ensure the button is a block element */
+  text-align: center; /* Align text within the button */
+}
+
+/* Animation Styles */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+
+.align-right{
+  text-align: right;
+  margin-bottom: 20px;
+  justify-content: center;
+}
