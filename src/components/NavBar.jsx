@@ -13,7 +13,7 @@ export default function NavBar() {
         <nav className="navbar is-transparent py-5 mx-6" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a className="navbar-item" href="#">
-                <p className="is-family-code has-text-weight-bold is-size-4 has-text-primary">&lt;brynsgtn.dev/&gt;</p>
+                <p className="is-family-code has-text-weight-bold is-size-4 has-text-primary">&lt;brynsgtn/&gt;</p>
                 </a>
                 <a
                     role="button"

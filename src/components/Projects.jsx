@@ -27,7 +27,7 @@ export default function Projects() {
                 <div className='featured-projects'>
                 {projects.map((project, index) => (
                 <div className="columns is-desktop featured-projects-column" key={index}>
-                    <div className="column">
+                    <div className="column featured-card">
                         <img
                             src={project.image}
                             alt="Placeholder"
@@ -76,7 +76,7 @@ export default function Projects() {
            
             ))}
             </div>
-            <h2 className='featured-projects-header has-text-primary has-text-centered additional-projects-header'>Additional Projects to Explore</h2>
+            <h2 className='featured-projects-header has-text-primary has-text-centered additional-projects-header'>Additional Projects to Explore</h2> 
             <div className="columns is-multiline">
           {displayedProjects.map((project, index) => (
             <div

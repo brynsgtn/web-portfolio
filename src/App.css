@@ -272,12 +272,12 @@ li {
 
 
 
-.about-me, .projects{
+.about-me, .projects, .contact{
     padding: 100px 0;
 
 }
 
-.about-header, .projects-header{
+.about-header, .projects-header, .contact-header{
   display: flex;
   align-items: center;
   gap: 10px;
@@ -285,7 +285,7 @@ li {
 
   
 }
-.about, .some{
+.about, .some, .contact-me{
   font-weight: 600;
   color: #ccd6f6;
   line-height: 1.1;
@@ -309,6 +309,13 @@ li {
 
 .projects-line {
   width: 200px;
+  height: 2px; /* Set the height of the line */
+  background-color: #8892b0; /* Set line color */
+  margin-left: 10px;
+}
+
+.contact-line {
+  width: 400px;
   height: 2px; /* Set the height of the line */
   background-color: #8892b0; /* Set line color */
   margin-left: 10px;
@@ -399,6 +406,36 @@ li {
 
 }
 
+.contact{
+  min-height: 100vh;
+}
+
+.contact-content{
+  max-width: 600px;
+}
+
+.contact-content-container{
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.whats-next-header{
+  margin: 10px 0 30px;
+  font-size: clamp(16px, 5vw, 24px);
+}
+
+.get-in-touch-header{
+  font-weight: 600;
+  color: #ccd6f6;
+  margin: 0px 0px 10px;;
+  font-size: clamp(30px, 5vw, 40px);
+  font-family: sans-serif;
+  white-space: nowrap;
+}
 /* .featured-projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -553,4 +590,21 @@ li {
   text-align: right;
   margin-bottom: 20px;
   justify-content: center;
+}
+
+.footer{
+  min-height:20px;
+  background-color: #0a192f;
+  text-align: center;
+  padding: 40px;
+}
+
+.built:hover{
+  color: #00d1b2;
+  cursor: pointer;
+}
+
+.featured-card:hover{
+  transform: translateY(-5px) scale(1.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

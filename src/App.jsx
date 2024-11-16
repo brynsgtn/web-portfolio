@@ -3,6 +3,8 @@ import './App.css'
 import NavBar from './components/NavBar'
 import { TypeAnimation } from 'react-type-animation';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 
 
@@ -104,6 +106,8 @@ function App() {
 
           </section>
           <Projects/>
+          <Contact/>
+          <Footer/>
         </main>
         <aside className='right'>
         <a className='email' href="mailto:bryansuguitan17@gmail.com">bryansuguitan17@gmail.com</a>
