@@ -113,7 +113,7 @@ export default function Projects() {
                       <p className="title is-5 has-text-white">{project.title}</p>
                     </div>
                   </div>
-                  <div className="content has-text-grey-light">{project.description}</div>
+                  <div className="content has-text-grey-light mb-4">{project.description}</div>
                   <div className="tags are-small">
                     {project.tags.map((tag, index) => (
                       <span key={index} className="tag has-text-primary" style={{ backgroundColor: '#112240' }}>

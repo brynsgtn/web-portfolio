@@ -219,8 +219,14 @@ aside {
   }
 
   .about-inner{
-    display: block!important;
+    flex-direction: column!important;
   }
+
+  .about-description{
+    order:2!important;
+    margin-top: 50px;
+  }
+
   .pic{
     border-radius: 140px!important;
   }
@@ -272,12 +278,12 @@ li {
 
 
 
-.about-me, .projects, .contact{
+.about-me, .projects, .contact, .education{
     padding: 100px 0;
 
 }
 
-.about-header, .projects-header, .contact-header{
+.about-header, .projects-header, .contact-header, .education-header{
   display: flex;
   align-items: center;
   gap: 10px;
@@ -285,7 +291,7 @@ li {
 
   
 }
-.about, .some, .contact-me{
+.about, .some, .contact-me, .education{
   font-weight: 600;
   color: #ccd6f6;
   line-height: 1.1;
@@ -313,6 +319,12 @@ li {
   background-color: #8892b0; /* Set line color */
   margin-left: 10px;
 }
+.education-line {
+  width: 200px;
+  height: 2px; /* Set the height of the line */
+  background-color: #8892b0; /* Set line color */
+  margin-left: 10px;
+}
 
 .contact-line {
   width: 400px;
@@ -329,13 +341,17 @@ li {
 }
 
 .about-inner{
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .pic-wrapper{
   text-align: center;
+}
+
+.about-description{
+  max-width: 550px;
 }
 
 .pic {
@@ -607,4 +623,54 @@ li {
 .featured-card:hover{
   transform: translateY(-5px) scale(1.02);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid #8892b0;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+.timeline-circle {
+  position: absolute;
+  left: -37px;
+  top: 0px;
+  width: 12px;
+  height: 12px;
+  background: #00d1b2;
+  border-radius: 50%;
+}
+.timeline-content {
+  padding-left: 15px;
+}
+
+.education-skills-container{
+  max-width: 800px;
+}
+
+.education-skills{
+  display: flex;
+  justify-content: center;
+}
+
+.education-skills-column{
+  gap: 3rem;
+}
+
+.education-content{
+  margin-top: 50px!important;
+}
+
+.skills-content{
+  margin-top: 50px!important;
+}
+.content h4{
+  margin-bottom: 10px;
+}
+
+.school{
+  line-height: 1.5!important;
 }

@@ -5,7 +5,7 @@ import { TypeAnimation } from 'react-type-animation';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-
+import About from './components/About';
 
 
 
@@ -72,39 +72,7 @@ function App() {
             <p className='caption'>I specialize in full-stack development with MongoDB, Express, React, and Node, and am committed to staying up-to-date with emerging trends and best practices in web development.</p>
             <button className='mt-6 p-5 button is-primary is-outlined learn'>Learn More About Me</button>
           </section>
-          <section className='about-me'>
-            <div className='about-header'>
-              <h2 className='about'>About Me</h2>
-              <div className='about-line'></div>
-            </div>
-            <div className='about-inner'>
-              <div>
-                <p className='about-paragraph'>Hello! My name is Bryan, and I'm passionate about building web applications. I started my journey into web development in May 2023 by enrolling in <a href='https://zuitt.co/programdetails/' target='_blank' className='has-text-primary text-link'>Zuitt Coding Bootcamp's Tech Career Program</a>. Upon completing the program and earning my <a href='http://share.zertify.zuitt.co/certificate/6fbc6310-b435-4106-a559-65a6aefde5a4' target='_blank' className='has-text-primary text-link'>certification</a>, I've gained the skills and knowledge to create innovative and engaging web experiences.</p>
-                <p className='about-paragraph'>Fast-forward to today, and I’ve had the opportunity to dive deep into coding, practicing and working on <a href='' target='_blank' className='has-text-primary text-link'>personal projects</a>. These experiences have allowed me to refine my skills. My current focus is on building accessible, inclusive web applications, always striving to create meaningful digital experiences for users.</p>
-                <p className='about-paragraph'>I also recently earned certifications in <a href='' target='_blank' className='has-text-primary text-link'>AWS Fundamentals</a>, <a href='' target='_blank' className='has-text-primary text-link'>AWS Serverless</a>, and <a href='' target='_blank' className='has-text-primary text-link'>AWS Managed Services</a> in September 2024, upskilling my knowledge in cloud technologies.</p>
-                <p className='about-paragraph'>Here are a few technologies I’ve been working with recently:</p>
-                <ul className='skills'>
-                  <li>JavaScript (ES6+)</li>
-                  <li>React</li>
-                  <li>Node.js</li>
-                  <li>TypeScript</li>
-                  <li>AWS Fundamentals</li>
-                  <li>AWS Serverless</li>
-                  <li>AWS Managed Services</li>
-                </ul>
-              </div>
-              <div className='pic-wrapper'>
-                <img src='./pic.jpg' className='pic mb-5'></img>
-                <div className="mt-5">
-                      <a className="button is-primary is-outlined" href="#">
-                          <strong>Resume</strong>
-                      </a>
-                </div>
-              </div>
-            </div>
-            
-
-          </section>
+          <About/>
           <Projects/>
           <Contact/>
           <Footer/>
