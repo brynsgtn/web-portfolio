@@ -384,30 +384,8 @@ li {
 }
 
 
-.skills{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(120px, 200px));
-  gap: 0px 3px;
-  padding: 0px;
-  margin: 10px 0px 0px;
-  overflow: hidden;
-  list-style:none;
-  font-size: 12px;
-}
 
-.skills li{
-  margin: 10px;
-  padding-left: 10px;
-}
 
-.skills li:before{
-  content: "▹";
-  padding-right: 10px;
-  left: 0px;
-  color: #00d1b2;
-  font-size: 14px;
-  line-height: 12px;
-}
 
 #particles-container, canvas {
   z-index: -1;
@@ -654,14 +632,25 @@ li {
 .education-skills{
   display: flex;
   justify-content: center;
+  margin-top:100px
 }
 
-.education-skills-column{
-  gap: 3rem;
-}
 
-.education-content{
+.education-content, .experience-content{
   margin-top: 50px!important;
+}
+
+.skills{
+
+  display: flex;
+  flex-direction: row;
+
+
+}
+
+.skills-width{
+  min-width: 300px;
+
 }
 
 .skills-content{
@@ -673,4 +662,115 @@ li {
 
 .school{
   line-height: 1.5!important;
+}
+
+.tabs.is-boxed a:hover {
+  color: #00d1b2;
+  background-color: #0a192f;
+  border-bottom-color: none !important;
+  border-bottom: none;
+}
+
+.tabs.is-boxed a{
+  border-bottom: none;
+  font-size: 1rem;
+}
+
+.tabs.is-boxed li.is-active a {
+  background-color: #0a192f;
+  border-bottom-color: none !important;
+  color: #00d1b2;
+  font-size: 1.3rem;
+  border-right-color:#00d1b2;
+  border-top-color:#00d1b2;
+  border-left-color:#00d1b2;
+}
+
+.tabs ul {
+  flex-wrap: wrap; /* Allow tabs to wrap on small screens */
+  justify-content: center; /* Ensure tabs are centered */
+  overflow: hidden; /* Prevent scrollbars */
+  padding: 0;
+  gap: 8px; /* Add spacing between tabs */
+  border-bottom-color: #00d1b2;
+}
+
+
+.tabs ul li {
+    flex: 1 1 auto; /* Allow tabs to shrink and grow */
+    text-align: center; /* Center text inside each tab */
+    min-width: 100px; /* Ensure minimum size for tabs */
+}
+
+.tabs.is-centered {
+  display: flex;
+  justify-content: center; /* Center the tabs horizontally */
+  align-items: center; /* Align items vertically */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  margin: 20px 0;
+}
+
+.tabs ul {
+  display: flex;
+  justify-content: center; /* Center tabs horizontally */
+  flex-wrap: wrap; /* Allow the items to stack on smaller screens */
+  padding: 0;
+  gap: 8px; /* Add spacing between tabs */
+  list-style: none; /* Remove bullet points */
+}
+
+.tabs ul li {
+  flex: 1 1 auto; /* Make tabs flexible */
+  text-align: center; /* Center text inside each tab */
+  min-width: 100px; /* Set a minimum width for tabs */
+}
+
+@media (max-width: 768px) {
+  .tabs ul {
+      flex-direction: column; /* Stack tabs vertically */
+      align-items: center; /* Center vertically stacked tabs */
+      border: none;
+  }
+
+  .tabs ul li {
+      width: 40%; /* Make tabs take full width */
+      text-align: center; /* Keep text centered */
+      border-bottom-color: #00d1b2!important;
+      border-bottom: solid;
+  }
+
+  .tabs.is-boxed li.is-active a {
+    background-color: #0a192f;
+    border-bottom-color: none !important;
+    color: #00d1b2;
+    font-size: 1.3rem;
+    border: none;
+  }
+  .tabs.is-boxed li.is-active a:hover {
+    border: none;
+    background-color: #0a192f;
+  }
+  
+  
+}
+
+.subtitle{
+  margin-bottom: unset!important;
+}
+
+.timeline-content{
+  margin: 50px 0px 0px!important;
+}
+
+.tasks li:before{
+  content: "▹";
+  padding-right: 10px;
+  left: 0px;
+  color: #00d1b2;
+  font-size: 14px;
+  line-height: 12px;
+}
+
+.tasks li{
+  list-style: none;
 }
