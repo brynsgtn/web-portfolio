@@ -1,0 +1,34 @@
+[
+    { 
+      "skill": "HTML",
+      "level": 80
+    },
+    { 
+      "skill": "CSS",
+      "level": 80
+    },
+    { 
+      "skill": "JavaScript",
+      "level": 75
+    },
+    { 
+      "skill": "TypeScript",
+      "level": 65
+    },
+    { 
+      "skill": "ReactJS",
+      "level": 80
+    },
+    { 
+      "skill": "NodeJS",
+      "level": 73
+    },
+    { 
+      "skill": "ExpressJS",
+      "level": 72
+    },
+    { 
+      "skill": "MongoDB",
+      "level": 75
+    }
+  ]

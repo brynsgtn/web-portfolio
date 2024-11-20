@@ -1,11 +1,13 @@
 
 import './App.css'
 import NavBar from './components/NavBar'
-import { TypeAnimation } from 'react-type-animation';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import About from './components/About';
+import Landing from './components/Landing';
+import ParticlesBackground from './components/ParticlesBackground';
+
 
 
 
@@ -14,9 +16,10 @@ function App() {
 
   return (
     <>
+      <ParticlesBackground/>
       <NavBar/>
       <div className='main'>
-        <aside className='left'>
+        <aside className='left animate__animated animate__slideInUp'>
           <ul>
             <a href="https://github.com/brynsgtn" aria-label="GitHub" target="_blank" rel="noreferrer">
               <li>
@@ -52,32 +55,13 @@ function App() {
           <div className='left-border'></div>
         </aside>
         <main>
-          <section className='hero'>
-            <h5 className='has-text-primary my-name'>Hi, my name is</h5>
-            <h1 className='name'>Bryan Suguitan.</h1>
-            <TypeAnimation
-              sequence={[
-                // Same substring at the start will only be typed out once, initially
-                'I build web applications.',
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
-                'I craft digital experiences.',
-                1000,
-                'I breathe life into code.',
-                1000
-              ]}
-              speed={50}
-              className='description'
-              repeat={Infinity}
-            />
-            <p className='caption'>I specialize in full-stack development with MongoDB, Express, React, and Node, and am committed to staying up-to-date with emerging trends and best practices in web development.</p>
-            <button className='mt-6 p-5 button is-primary is-outlined learn'>Learn More About Me</button>
-          </section>
+          <Landing/>
           <About/>
           <Projects/>
           <Contact/>
           <Footer/>
         </main>
-        <aside className='right'>
+        <aside className='right animate__animated animate__slideInUp'>
         <a className='email' href="mailto:bryansuguitan17@gmail.com">bryansuguitan17@gmail.com</a>
           <div className='right-border'></div>
         </aside>

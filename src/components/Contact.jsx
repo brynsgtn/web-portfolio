@@ -1,8 +1,9 @@
 
 
 export default function () {
+
     return(
-        <section className="contact">
+        <section className="contact animate__animated animate__zoomInDown" id='contact'>
             <div className="contact-header">
                 <h1 className="contact-me">Contact Me</h1>
                 <div className='contact-line '></div>

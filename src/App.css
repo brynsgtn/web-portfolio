@@ -3,6 +3,7 @@
 *{
     font-family: monospace;
     box-sizing: border-box;
+    user-select: none;
 
 }
 
@@ -74,16 +75,86 @@ body {
     transform-origin: top left; /* Scale and translate from upper-left corner */
   }
 
+  /* Navbar Visibility Transitions */
+.navbar {
+  transition: transform 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1000;
+  padding: 20px 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  backdrop-filter: blur(5px); /* Adds a subtle blur effect */
+  transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+}
+
+.is-visible {
+  transform: translateY(0);
+  background-color: rgba(255, 255, 255, 0.95); /* More opaque white background */
+  backdrop-filter: blur(10px); /* Stronger blur effect */
+}
+
+.is-hidden {
+  transform: translateY(-100%);
+}
+
+/* Burger Menu Slide Animation */
+.menu-slide {
+  animation: slide-down 0.4s ease-out;
+}
+
+@keyframes slide-down {
+  from {
+      transform: translateY(-50%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Blur Overlay */
+.blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.blur-overlay.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* Burger Menu Styles */
+.navbar-burger {
+  z-index: 1010; /* Ensure the burger is above other elements */
+  position: relative;
+  
+}
+/* Navbar Menu */
+.navbar-menu {
+ 
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+
   .navbar-item{
     color: white!important;
-    margin-right: 0; /* No margin on small screens */
+    margin-right: 30px; /* No margin on small screens */
   }
 
-  @media screen and (min-width: 1024px) {
-    .navbar-item {
-        margin-right: 1.25rem; /* equivalent to mr-5 */
-    }
-}
 
   .navbar-item:hover {
     color: 	hsl(171, 100%, 41%) !important; /* Bulma's primary color */
@@ -107,7 +178,6 @@ body {
     min-height: 100vh;
     height: 100vh;
     justify-content: initial; /* or unset */
-
   }
 
   .name {
@@ -135,13 +205,14 @@ body {
     font-family: sans-serif;
   }
 
-  .learn {
+  .learn, .download {
     width: 180px;
   }
 
   .main {
-
+    z-index: 2;
     padding: 0px 25px;
+    position: relative;
   }
 
   section{
@@ -215,7 +286,7 @@ aside {
   }
 
   .hero {
-    padding-top: 100px;
+    padding-top: 200px;
   }
 
   .about-inner{
@@ -232,6 +303,16 @@ aside {
   }
   .column{
     flex-basis: unset;
+  }
+
+  .navbar-menu{
+    margin-top: 10px;
+    padding: 50px 0;
+    background-color: #0a192f;
+  }
+
+  .navbar-item{
+    margin: 20px 0px;
   }
   
 }
@@ -387,12 +468,6 @@ li {
 
 
 
-#particles-container, canvas {
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
 
 
 .projects{
@@ -773,4 +848,23 @@ li {
 
 .tasks li{
   list-style: none;
+}
+
+.logo:hover {
+ color: white!important;
+}
+
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Place particles in the background */
+}
+
+.more{
+  cursor: pointer;
+}
+
+.more:hover{
+  color: white!important;
 }

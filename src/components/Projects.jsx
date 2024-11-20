@@ -1,7 +1,7 @@
 import '../App.css';
 import projects from '../data/projects.json';
 import { FiExternalLink } from "react-icons/fi";
-import React, { useState } from 'react';
+import { useState} from 'react'
 import otherProjects from '../data/otherProjects.json'
 
 export default function Projects() {
@@ -13,9 +13,10 @@ export default function Projects() {
   const handleSeeMore = () => {
     setShowAll(!showAll);
   };
+  
     
     return(
-        <section className='projects'>
+        <section className='projects animate__animated animate__fadeInRight' id='projects'>
             <div className='projects-header'>
                 <h2 className='some'>Some things I've built</h2>
                 <div className='projects-line'></div>
@@ -26,7 +27,7 @@ export default function Projects() {
 
                 <div className='featured-projects'>
                 {projects.map((project, index) => (
-                <div className="columns is-desktop featured-projects-column" key={index}>
+                <div className="columns is-desktop featured-projects-column" key={index} >
                     <div className="column featured-card">
                         <img
                             src={project.image}

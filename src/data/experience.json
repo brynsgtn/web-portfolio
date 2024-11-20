@@ -1,0 +1,34 @@
+[
+    {
+      "position": "Revenue Officer",
+      "company": "Bureau of Internal Revenue",
+      "location": "Quezon City, Philippines",
+      "duration": "2021 - 2022",
+      "responsibilities": [
+        "Managed revenue-related tasks and compliance within the agency",
+        "Supported tax administration processes and ensured adherence to government regulations"
+      ]
+    },
+    {
+      "position": "Legal Assistant",
+      "company": "UCPB Leasing and Finance Corporation",
+      "location": "Makati City, Philippines",
+      "duration": "2018 - 2021",
+      "responsibilities": [
+        "Coordinated with courts and government agencies for legal actions and case development",
+        "Drafted and dispatched legal documents, including demand and cancellation letters",
+        "Maintained and updated case files with monthly progress reports"
+      ]
+    },
+    {
+      "position": "Loans Operation Specialist",
+      "company": "United Coconut Planters Bank (UCPB)",
+      "location": "Makati City, Philippines",
+      "duration": "2017 - 2018",
+      "responsibilities": [
+        "Ensured safekeeping and systematic filing of loan documents and borrower collaterals",
+        "Managed collateral release requests in compliance with bank policies",
+        "Conducted quarterly inventory and monthly reconciliation of loan and collateral records"
+      ]
+    }
+  ]

@@ -1,0 +1,30 @@
+[
+    {
+      "title": "Full-stack Web Development",
+      "organization": "Zuitt - Coding Bootcamp",
+      "date": "Aug 2023",
+      "image": "./Full-stack Development.jpeg",
+      "link": "https://share.zertify.zuitt.co/certificate/6fbc6310-b435-4106-a559-65a6aefde5a4/"
+    },
+    {
+      "title": "AWS Fundamentals",
+      "organization": "Zuitt - Coding Bootcamp",
+      "date": "Sep 2024",
+      "image": "./AWS Fundamentals.jpeg",
+      "link": "https://share.zertify.zuitt.co/certificate/0e05044e-8995-4243-93f9-6253d44c17cb/"
+    },
+    {
+      "title": "AWS Serverless",
+      "organization": "Zuitt - Coding Bootcamp",
+      "date": "Sep 2024",
+      "image": "./AWS Serverless.jpeg",
+      "link": "https://share.zertify.zuitt.co/certificate/fe897952-328c-4539-af8e-c6889e8c0a62/"
+    },
+    {
+      "title": "AWS Managed Services",
+      "organization": "Zuitt - Coding Bootcamp",
+      "date": "Sep 2024",
+      "image": "./AWS Managed Services.jpeg",
+      "link": "https://share.zertify.zuitt.co/certificate/ba6c40aa-d06c-44ba-a998-648e85198c69/"
+    }
+  ]

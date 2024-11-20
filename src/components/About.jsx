@@ -1,140 +1,30 @@
 import '../App.css'
 import { useState } from 'react'
+import educations from '../data/educations.json'
+import skills from '../data/skills.json'
+import experience from '../data/experience.json'
+import certifications from '../data/certifications.json'
+import 'animate.css';
 
 export default function About(){
 
     const [activeTab, setActiveTab] = useState('Education');
+    const [showMore, setShowMore] = useState(false);
 
     const handleTabClick = (tabName) => {
       setActiveTab(tabName);
     };
 
-    const educations = [
-        {
-            school: "Mapua University",
-            course: "BS Information Technology",
-            year: "2022-Present"
-        },
-        {
-            school: "Philippine School of Business Administration",
-            course: "Master's in Business Administration",
-            year: "2020-2022"
-        },
-        {
-            school: "Wesleyan University-Philippines",
-            course: "BSBA Major in Financial Management",
-            year: "2012-2016"
-        }
-    ]
-
-    const skills = [
-        { 
-            skill: 'HTML',
-             level: 80 
-        },
-        { 
-            skill: 'CSS',
-             level: 80 
-        },
-        { 
-            skill: 'JavaScript',
-             level: 75 
-        },
-        { 
-            skill: 'TypeScript',
-             level: 65 
-        },
-        { 
-            skill: 'ReactJS',
-             level: 80 
-        },
-        { 
-            skill: 'NodeJS',
-             level: 73 
-        },
-        { 
-            skill: 'ExpressJS',
-             level: 72 
-        },
-        { 
-            skill: 'MongoDB',
-             level: 75 
-        }
-    ]
+    const toggleshowMore = () => {
+        setShowMore(!showMore);
+    };
 
 
-    const experience = [
-        {
-          position: "Revenue Officer",
-          company: "Bureau of Internal Revenue",
-          type: "Full-time",
-          location: "Quezon City, Philippines",
-          duration: "2021 - 2022",
-          responsibilities: [
-            "Managed revenue-related tasks and compliance within the agency",
-            "Supported tax administration processes and ensured adherence to government regulations"
-          ]
-        },
-        {
-          position: "Legal Assistant",
-          company: "UCPB Leasing and Finance Corporation",
-          type: "Full-time",
-          location: "Makati City, Philippines",
-          duration: "2018 - 2021",
-          responsibilities: [
-            "Coordinated with courts and government agencies for legal actions and case development",
-            "Drafted and dispatched legal documents, including demand and cancellation letters",
-            "Maintained and updated case files with monthly progress reports"
-          ]
-        },
-        {
-          position: "Loans Operation Specialist",
-          company: "United Coconut Planters Bank (UCPB)",
-          type: "Full-time",
-          location: "Makati City,Philippines",
-          duration: "2017 - 2018",
-          responsibilities: [
-            "Ensured safekeeping and systematic filing of loan documents and borrower collaterals",
-            "Managed collateral release requests in compliance with bank policies",
-            "Conducted quarterly inventory and monthly reconciliation of loan and collateral records"
-          ]
-        }
-      ];
-
-      const certifications = [
-        {
-            title: "Full-stack Web Development",
-            organization: 'Zuitt - Coding Bootcamp',
-            date: 'Aug 2023',
-            image: './Full-stack Development.jpeg',
-            link: 'https://share.zertify.zuitt.co/certificate/6fbc6310-b435-4106-a559-65a6aefde5a4/'
-          },
-        {
-          title: 'AWS Fundamentals',
-          organization: 'Zuitt - Coding Bootcamp',
-          date: 'Sep 2024',
-          image: './AWS Fundamentals.jpeg',
-          link: 'https://share.zertify.zuitt.co/certificate/0e05044e-8995-4243-93f9-6253d44c17cb/'
-        },
-        {
-          title: 'AWS Serverless',
-          organization: 'Zuitt - Coding Bootcamp',
-          date: 'Sep 2024',
-          image: './AWS Serverless.jpeg',
-          link: 'https://share.zertify.zuitt.co/certificate/fe897952-328c-4539-af8e-c6889e8c0a62/'
-        },
-        {
-            title: 'AWS Managed Services',
-            organization: 'Zuitt - Coding Bootcamp',
-            date: 'Sep 2024',
-            image: './AWS Managed Services.jpeg',
-            link: 'https://share.zertify.zuitt.co/certificate/ba6c40aa-d06c-44ba-a998-648e85198c69/'
-          }
-      ];
+ 
       
     return(
         <>
-            <section className='about-me'>
+            <section className='about-me animate__animated animate__zoomIn' id='about'>
                 <div className='about-header'>
                 <h2 className='about'>About Me</h2>
                 <div className='about-line'></div>
@@ -144,20 +34,26 @@ export default function About(){
                     <p className='about-paragraph'>Hello! My name is Bryan, and I'm passionate about building web applications. I started my journey into web development in May 2023 by enrolling in <a href='https://zuitt.co/programdetails/' target='_blank' className='has-text-primary text-link'>Zuitt Coding Bootcamp's Tech Career Program</a>. Upon completing the program and earning my certification, I've gained the skills and knowledge to create innovative and engaging web experiences.</p>
                     <p className='about-paragraph'>Fast-forward to today, and I’ve had the opportunity to dive deep into coding, practicing and working on personal projects. These experiences have allowed me to refine my skills. My current focus is on building accessible, inclusive web applications, always striving to create meaningful digital experiences for users.</p>
                     <p className='about-paragraph'>I also recently earned certifications in <a href='' target='_blank' className='has-text-primary text-link'>AWS Fundamentals</a>, <a href='' target='_blank' className='has-text-primary text-link'>AWS Serverless</a>, and <a href='' target='_blank' className='has-text-primary text-link'>AWS Managed Services</a> in September 2024, upskilling my knowledge in cloud technologies.</p>
+                    <p className="has-text-primary pt-5 pl-5 more" onClick={toggleshowMore}>{showMore ? 'Hide Details' : 'Show More Details'}</p> 
+                        
                 </div>
                 <div className='pic-wrapper'>
                     <img src='./pic.jpg' className='pic mb-5'></img>
                     <div className="my-5">
-                        <a className="button is-primary is-outlined" href="#">
-                            <strong>Download Resume</strong>
-                        </a>
+                            <a className="has-text-primary has-text-weight-bold" href="#">
+                                <button className="button is-primary is-outlined mt-6 p-4 download">
+                                    <strong>Download Resume</strong>
+                                </button>
+                            </a>
                     </div>
                 </div>
                 </div>
+     
             </section>
 
 
-            <section className="education-skills-container">
+            {showMore && (
+                <section className="education-skills-container">
                 <div className="tabs is-centered is-boxed is-fullwidth">
                     <ul>
                         <li className={activeTab === 'Education' ? 'is-active' : ''}>
@@ -185,7 +81,7 @@ export default function About(){
 
                 <div className="education-skills">
                     {activeTab === 'Education' && (
-                        <div className="">
+                        <div className="animate__animated animate__fadeInRight"> 
                             <h3 className="title is-3 has-text-primary">My Education</h3>
                             <div className="content">
                                 <div className="timeline education-content">
@@ -205,7 +101,7 @@ export default function About(){
                     )}
 
                     {activeTab === 'Skills' && (
-                        <div className="skills">
+                        <div className="skills animate__animated animate__fadeInRight">
                             <div className='skills-width'>
                             <h3 className="title is-3 has-text-primary">My Skills</h3>
                             <div className="content skills-content">
@@ -232,13 +128,13 @@ export default function About(){
                     )}
 
                     {activeTab === 'Certifications' && (
-                        <div className="container">
+                        <div className="container ">
                         <h1 className="title is-3 has-text-primary">My Certifications</h1>
 
                         <div className="columns is-multiline">
                             {certifications.map((certificate, index) => (
-                                <div className="column is-half" key={index}>
-            <div className="card card-bg equal-height-card p-2">
+                                <div className="column is-half fade-in" key={index}  style={{ animationDelay: `${index * 0.2}s` }}>
+            <div className="card card-bg equal-height-card p-2 ">
               {/* Card Image */}
               <div className="">
                 <figure className="image is-4by3">
@@ -257,13 +153,13 @@ export default function About(){
 
                 {/* Button linking to the certificate link */}
                 <div className="content">
-                <button class="button is-primary is-outlined mt-5"><a
+                <a
                     href={certificate.link}
                     target="_blank"
                     className='has-text-primary'
-                  >
+                  ><button class="button is-primary is-outlined mt-5">
                     View Certificate
-                  </a></button>
+                  </button></a>
                 </div>
               </div>
             </div>
@@ -274,7 +170,7 @@ export default function About(){
                     )}
 
                     {activeTab === 'Experience' && (
-                        <div className="">
+                        <div className="animate__animated animate__animated animate__fadeInRight">
                         <h3 className="title is-3 has-text-primary">My Experience</h3>
                         <div className="content">
                             <div className="timeline experience-content">
@@ -300,6 +196,7 @@ export default function About(){
                     )}
                 </div>
             </section>
+            )}
             
         </>
 
