@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import 'animate.css';
+import PDF from '/Suguitan-Bryan-CV.pdf'
 
 export default function NavBar() {
     const [isActive, setIsActive] = useState(false);
@@ -93,7 +94,7 @@ export default function NavBar() {
                             <div className="buttons">
                                 <a
                                     className="button is-primary is-outlined"
-                                    href="#"
+                                    href={PDF} target="_blank"
                                 >
                                     <strong>Resume</strong>
                                 </a>

@@ -19,6 +19,26 @@ export default function About(){
         setShowMore(!showMore);
     };
 
+    // Function will execute on click of button
+    const downloadResume = () => {
+    
+        // using Java Script method to get PDF file
+        fetch("Suguitan-Bryan-CV.pdf").then((response) => {
+            response.blob().then((blob) => {
+            
+                // Creating new object of PDF file
+                const fileURL =
+                    window.URL.createObjectURL(blob);
+                    
+                // Setting various property values
+                let alink = document.createElement("a");
+                alink.href = fileURL;
+                alink.download = "Suguitan-Bryan-CV.pdf";
+                alink.click();
+            });
+        });
+    };
+
     return(
         <>
             <section className='about-me animate__animated animate__zoomIn' id='about'>
@@ -37,7 +57,7 @@ export default function About(){
                         <img src='./pic.jpg' className='pic mb-5'></img>
                         <div className="my-5">
                                 <a className="has-text-primary has-text-weight-bold" href="#">
-                                    <button className="button is-primary is-outlined mt-6 p-4 download">
+                                    <button className="button is-primary is-outlined mt-6 p-4 download" onClick={downloadResume}>
                                         <strong>Download Resume</strong>
                                     </button>
                                 </a>

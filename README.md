@@ -5,12 +5,9 @@ Welcome to my personal web developer portfolio! This project showcases my skills
 ## 🌟 Features
 - **Responsive Design**: Fully mobile-friendly and optimized for various devices.
 - **Interactive Navigation**: Smooth scrolling and easy-to-use menu.
-- **Project Highlights**: Showcasing key projects with descriptions and live demo links.
-- **Skills Section**: Visual representation of technical and soft skills.
-- **Contact Form**: Simple and intuitive form to connect with me directly.
 
 ## 🚀 Live Demo
-Check out my portfolio: [<brynsgtn.dev>]()
+Check out my portfolio: [<brynsgtn.dev>](https://brynsgtn-webportfolio.vercel.app/)
 
 ## 🛠️ Technologies Used
 - **HTML5**: For structuring the content.
@@ -20,19 +17,6 @@ Check out my portfolio: [<brynsgtn.dev>]()
 - **Bulma**: For CSS framework.
 - **Git/GitHub**: For version control.
 - **Vercel**: For deployment.
-
-## 📂 Project Highlights
-1. **Dish Discover Recipe Finder**  
-   - A web app built with React to help users discover recipes based on their ingredients.  
-   - [Live Demo](https://dish-discover-brynsgtn.netlify.app/) | [Source Code](https://github.com/brynsgtn/dish-discover)
-
-2. **Shop Smart E-commerce Prototype**  
-   - A React-based front-end prototype for an e-commerce application.  
-   - [Live Demo](https://shopsmart-brynsgtn.netlify.app/) | [Source Code](https://github.com/brynsgtn/shop-smart)
-
-3. **To-Do List App**  
-   - A task management app built with JavaScript and Firebase, later converted to TypeScript.  
-   - [Live Demo](https://to-do-list-brynsgtn.netlify.app/) | [Source Code](https://github.com/brynsgtn/to-do-list)
 
 ## 📧 Contact Me
 Feel free to reach out via email or connect with me on LinkedIn!  
