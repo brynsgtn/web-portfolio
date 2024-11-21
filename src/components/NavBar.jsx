@@ -34,7 +34,8 @@ export default function NavBar() {
             <div
                 className={`blur-overlay ${isActive ? "is-active" : ""}`}
                 onClick={() => setIsActive(false)} // Close menu on click outside
-            ></div>
+            >
+            </div>
 
             <nav
                 className={`navbar is-transparent animate__animated animate__fadeInDown animate__faster ${

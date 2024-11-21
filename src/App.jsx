@@ -9,9 +9,6 @@ import Landing from './components/Landing';
 import ParticlesBackground from './components/ParticlesBackground';
 
 
-
-
-
 function App() {
 
   return (
@@ -66,10 +63,7 @@ function App() {
           <div className='right-border'></div>
         </aside>
       </div>
-
     </>
-      
-
   )
 }
 
