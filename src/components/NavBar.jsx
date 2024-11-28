@@ -11,6 +11,10 @@ export default function NavBar() {
         setIsActive(!isActive);
     };
 
+    const unBlur = () => {
+        setIsActive(false);
+    }
+
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.scrollY;
@@ -31,12 +35,10 @@ export default function NavBar() {
 
     return (
         <>
-            {/* Blur background when menu is active */}
-            <div
-                className={`blur-overlay ${isActive ? "is-active" : ""}`}
-                onClick={() => setIsActive(false)} // Close menu on click outside
-            >
-            </div>
+            {/* Blur background overlay */}
+            {isActive && (
+                <div className="blur-overlay is-active"></div>
+            )}
 
             <nav
                 className={`navbar is-transparent animate__animated animate__fadeInDown animate__faster ${
@@ -73,7 +75,7 @@ export default function NavBar() {
                         isActive ? "is-active menu-slide" : ""
                     }`}
                 >
-                    <div className="navbar-end">
+                    <div className="navbar-end" onClick={unBlur}>
                         <a className="navbar-item" href="#about">
                             About
                         </a>
@@ -94,7 +96,7 @@ export default function NavBar() {
                             <div className="buttons">
                                 <a
                                     className="button is-primary is-outlined"
-                                    href={PDF} target="_blank"
+                                    href={PDF} target="_blank" rel="noopener noreferrer"
                                 >
                                     <strong>Resume</strong>
                                 </a>
